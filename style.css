@@ -26,7 +26,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-img,
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    padding: 0 20px ;
+
+}
+
+img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px  solid black; 
+   
+}
+
+
 picture,
 video,
 canvas,
@@ -36,25 +50,51 @@ svg {
 }
 
 input,
-button,
+
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 11rem;
+    margin-bottom: 20px;
+    
+}
+
 textarea,
 select {
     font: inherit;
 }
 
 p,
-h1,
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 3rem;
+}
 h2,
-h3,
+h3{
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 50px;
+    
+}
 h4,
 h5,
 h6 {
     overflow-wrap: break-word;
 }
 
+
 button {
-    background-color: unset;
-    border: unset;
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 a {
@@ -65,4 +105,11 @@ a {
 #root,
 #__next {
     isolation: isolate;
+}
+
+.infos{
+    background-color: #1E1E1E;
+    height: 100px; 
+    margin-top: 20px;
+
 }
