@@ -107,9 +107,16 @@ a {
     isolation: isolate;
 }
 
-.infos{
+#infosDiv{
     background-color: #1E1E1E;
-    height: 100px; 
+    height: auto; 
+    min-width: auto;
     margin-top: 20px;
+}
 
+#title{
+    color: white;
+    text-decoration: none;
+    font-size: 5rem;
+    
 }
