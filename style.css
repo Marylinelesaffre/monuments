@@ -37,7 +37,11 @@ img{
     width: 100%;
     aspect-ratio: 1/1;
     border: 1px  solid black; 
-   
+    
+}
+
+.grayscale {
+    filter: grayscale(100%);
 }
 
 
@@ -64,7 +68,6 @@ select {
     font: inherit;
 }
 
-p,
 
 h1{
     text-align: center;
@@ -72,14 +75,14 @@ h1{
     padding: 20px;
     font-size: 3rem;
 }
-h2,
+
 h3{
     text-decoration: underline;
     text-align: center;
     padding-bottom: 50px;
     
 }
-h4,
+
 h5,
 h6 {
     overflow-wrap: break-word;
@@ -108,15 +111,48 @@ a {
 }
 
 #infosDiv{
-    background-color: #1E1E1E;
+    background-color: #1E1E1E; 
+    color: white;
     height: auto; 
     min-width: auto;
     margin-top: 20px;
+    padding: 88px;
 }
 
 #title{
     color: white;
     text-decoration: none;
     font-size: 5rem;
-    
+    animation-duration: 5s;
+    animation-name: animationTexte;
+
 }
+.span{
+    font-size: 1.5rem;
+    color: white;
+    animation-duration: 5s;
+    animation-name: animationTexte;
+}
+#pays{
+    color: gray;
+    font-size: 25px;
+    animation-duration: 5s;
+    animation-name: animationTexte;
+}
+p{
+  color: gray;
+  animation-duration: 5s;
+  animation-name: animationTexte;
+}
+
+@keyframes animationTexte {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
