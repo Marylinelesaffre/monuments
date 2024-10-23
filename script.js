@@ -20,7 +20,7 @@ function maFonction(monument) {
 
     // Afficher le pin sur la map
     const pin  = document.getElementById("marqueur");
-    pin.style.display = "block"; // Cacher le pin par défaut
+    pin.style.display = "block"; 
 
     //permet de vérifier quel monument correspond
     if (monument === 'tour_eiffel') {
