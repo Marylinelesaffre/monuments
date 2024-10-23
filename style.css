@@ -155,3 +155,29 @@ p {
     opacity: 1; 
     transition: transform 0.8s ease, opacity 0.8s ease; 
 }
+
+.show {
+    display: block; /* Affiche l'image */
+    margin: 0 auto; /* Centre l'image */
+}
+.bonus {
+    position: relative; /* Nécessaire pour le positionnement absolu du marqueur */
+}
+
+#map{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+
+}
+
+#marqueur{
+    position: absolute; 
+    width: 40px; 
+    height: 40px; 
+    display: none;
+    border: none;
+    
+}
