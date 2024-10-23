@@ -10,12 +10,12 @@ function maFonction(monument) {
     images.forEach(image => {
         image.classList.add('grayscale'); // Ajoute l'effet noir et blanc à toutes les images
     });
-    
+
     // Supprime l'effet noir et blanc uniquement de l'image sélectionnée
     document.getElementById(monument).classList.remove('grayscale');
-    
-        //permet de vérifier quel monument correspond
-    if (monument === 'tour_eiffel') { 
+
+    //permet de vérifier quel monument correspond
+    if (monument === 'tour_eiffel') {
         //définie les information que doit contenir le monument correspondant 
         title = "Tour Eiffel";
         pays = "Paris, <span class='span'>France</span>";
@@ -44,12 +44,17 @@ function maFonction(monument) {
     document.querySelector("#info").textContent = info;
 
     //pour l'animation de chaque bouton
-    titleElement.textContent = title;
-    paysElement.innerHTML = pays;
-    infoElement.textContent = info;
+    const elements = [document.querySelector("#info")];
+            elements.forEach(item => {
+                item.classList.remove('visible'); // Enlève la classe visible
+                item.classList.add('hidden'); // Ajoute la classe cachée pour réinitialiser
 
-    titleElement.classList.add('animationTexte');
-
+                // Utiliser setTimeout pour attendre la fin de la transition avant d'ajouter la classe visible
+                setTimeout(() => {
+                    item.classList.remove('hidden'); // Enlève la classe cachée
+                    item.classList.add('visible'); // Ajoute la classe visible
+                }, 10); // Attendre un très court instant avant d'ajouter la classe visible
+            });
 
 }
 
